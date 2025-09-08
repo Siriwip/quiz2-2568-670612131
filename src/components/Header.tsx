@@ -7,6 +7,7 @@ import {
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconSun, IconMoon } from "@tabler/icons-react";
+import { IconBowlSpoon } from "@tabler/icons-react";
 
 interface HeaderComponentProps {
   opened: boolean;
@@ -33,6 +34,13 @@ export default function HeaderComponent({
             aria-label="Toggle navigation"
           />
         )}
+        <ActionIcon variant="filled"
+         color={isDark ? "yellow" : "blue"}
+         onClick={toggleColorScheme}
+          size="lg"
+          aria-label="filled">
+      <IconBowlSpoon style={{ width: '70%', height: '70%' }} stroke={1.5} />
+    </ActionIcon>
         <Text
           size="xl"
           fw={900}
@@ -51,7 +59,7 @@ export default function HeaderComponent({
           aria-label={isDark ? "Light mode" : "Dark mode"}
         >
           {isDark ? <IconSun size={20} /> : <IconMoon size={20} />}
-        </ActionIcon>
+        </ActionIcon> 
       </Group>
     </Group>
   );

@@ -1,9 +1,10 @@
 import { Text, Group } from "@mantine/core";
-export default function Footer(/* add props here */) {
+import type { FooterProps } from "../libs/Footer";
+export default function Footer({} : FooterProps) {
   return (
     <Group p="md" justify="center">
       <Text>
-        © Chanadda 670612999 CPE207-2025. All rights reserved.
+        © Siriwipha 670612131 CPE207-2025. All rights reserved.
       </Text>
     </Group>
   );
